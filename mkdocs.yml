@@ -1,7 +1,7 @@
 site_name: BlueSec
 nav:
   - Redes:
-    - IPv4: Redes/Ipv4.md
+    - IPv4: Redes/IPv4.md
     - Portas: Redes/Portas.md
   - Index: index.md
   - Sobre: sobre.md
