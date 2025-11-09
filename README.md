@@ -1,4 +1,4 @@
-# 🛡️ BlueSec
+# 🛡️ BlueBird
 
 Um site dedicado ao compartilhamento de conhecimentos, ferramentas, boas práticas e recursos voltados à defesa cibernética (Blue Team). Ideal para profissionais de segurança da informação, SOC analysts, e entusiastas que desejam fortalecer sua postura defensiva.  
 Para acessar https://0x107u5.github.io/BlueSec/
