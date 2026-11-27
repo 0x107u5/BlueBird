@@ -1,4 +1,8 @@
-# Sobre
+---
+# the default layout is 'page'
+icon: fas fa-info-circle
+order: 4
+---
 
 Seja bem-vindo(a) ao **BlueBird**! 💙
 
