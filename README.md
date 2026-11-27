@@ -33,6 +33,10 @@ pip install -r requirements.txt
 zensical serve
 ```
 
+## ✍️ Padrão de escrita
+
+Antes de escrever, veja o [guia de estilo](GUIA-DE-ESTILO.md): tom, termos técnicos, formato de nota, admonitions, blocos de código e como anonimizar dados. Há uma nota completa de exemplo em `templates/exemplo-nota.md`.
+
 ## ✍️ Como escrever um post no blog
 
 1. Copie `templates/post.md` para `docs/blog/posts/`, com um nome como `2026-12-01-meu-post.md`.
@@ -82,7 +86,8 @@ docs/
     └── posts/            # Um arquivo .md por post
 templates/
 ├── post.md               # Modelo de post do blog
-└── pagina.md             # Modelo de página de referência
+├── pagina.md             # Modelo de nota técnica (página de referência)
+└── exemplo-nota.md       # Nota completa seguindo o guia de estilo
 ```
 
 ### Post ou página?
