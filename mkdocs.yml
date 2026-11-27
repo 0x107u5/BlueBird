@@ -35,6 +35,12 @@ plugins:
       pagination_per_page: 10
       draft: false
       draft_on_serve: true
+      categories_allowed:
+        - Avisos
+        - SIEM
+        - Google SecOps
+        - Logs
+        - Redes
   - tags
 
 markdown_extensions:
@@ -56,6 +62,18 @@ nav:
   - Início: index.md
   - Blog:
     - blog/index.md
+  - SIEM:
+    - SIEM/index.md
+    - Google SecOps:
+      - SIEM/Google-SecOps/index.md
+      - UDM: SIEM/Google-SecOps/udm.md
+      - Regras YARA-L: SIEM/Google-SecOps/yara-l.md
+      - Ingestão de dados: SIEM/Google-SecOps/ingestao.md
+  - Logs:
+    - Logs/index.md
+    - Windows: Logs/windows.md
+    - Linux: Logs/linux.md
+    - Rede: Logs/rede.md
   - Redes:
     - IPv4: Redes/IPv4.md
     - Portas: Redes/Portas.md
