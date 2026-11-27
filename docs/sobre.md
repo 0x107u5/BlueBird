@@ -1,5 +1,4 @@
 # Sobre
-# Sobre
 
 Seja bem-vindo(a) ao **BlueBird**! 💙
 
