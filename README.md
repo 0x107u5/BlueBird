@@ -2,6 +2,8 @@
 
 Um site dedicado ao compartilhamento de conhecimentos, ferramentas, boas práticas e recursos voltados à defesa cibernética (Blue Team). Ideal para profissionais de segurança da informação, SOC analysts, e entusiastas que desejam fortalecer sua postura defensiva.  
 Para acessar https://0x107u5.github.io/BlueBird/
+O site é gerado com [Zensical](https://zensical.org), a partir do `mkdocs.yml` e dos arquivos em `docs/`.
+
 ## 🔍 Sobre o Projeto
 
 Este projeto tem como objetivo centralizar e organizar conteúdos relevantes para o dia a dia de profissionais de defesa cibernética. O site traz tutoriais, checklists, ferramentas, indicadores de compromisso (IOCs), referências de hardening, scripts úteis e muito mais.
@@ -28,7 +30,7 @@ pip install -r requirements.txt
 3. Rodar o projeto
 
 ```bash
-mkdocs serve
+zensical serve
 ```
 
 ## ✍️ Como escrever um post no blog
@@ -58,7 +60,7 @@ Resumo que aparece na listagem do blog.
 Resto do conteúdo...
 ```
 
-3. Rode `mkdocs serve` para ver o post (rascunhos aparecem localmente, mas não no site publicado).
+3. Rode `zensical serve` para ver o post (rascunhos aparecem localmente, mas não no site publicado).
 4. Faça o push para `main`: o GitHub Actions publica o site automaticamente.
 
 A listagem, o arquivo por data e as páginas de categorias são gerados sozinhos. Autores ficam em `docs/blog/.authors.yml`.

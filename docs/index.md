@@ -1,4 +1,4 @@
-# Bem-vindo ao BlueSec
+# Bem-vindo ao BlueBird
 
 Conteúdo sobre **defesa cibernética (Blue Team)** em português, direto ao ponto.
 

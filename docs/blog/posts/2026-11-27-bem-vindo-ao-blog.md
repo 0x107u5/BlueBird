@@ -9,9 +9,9 @@ tags:
 slug: bem-vindo-ao-blog
 ---
 
-# Bem-vindo ao blog do BlueSec
+# Bem-vindo ao blog do BlueBird
 
-O BlueSec agora tem um blog! Aqui vão sair posts mais curtos e frequentes do que as páginas de referência: análises, ferramentas, write-ups e notas de estudo sobre defesa cibernética.
+O BlueBird agora tem um blog! Aqui vão sair posts mais curtos e frequentes do que as páginas de referência: análises, ferramentas, write-ups e notas de estudo sobre defesa cibernética.
 
 <!-- more -->
 
