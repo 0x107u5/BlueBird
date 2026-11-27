@@ -7,6 +7,8 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: pt-BR
+  logo: assets/arara.svg
+  favicon: assets/arara.svg
   palette:
     scheme: slate
     primary: blue
