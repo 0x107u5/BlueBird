@@ -1,7 +1,7 @@
 # Sobre
 # Sobre
 
-Seja bem-vindo(a) ao **BlueSec**! 💙
+Seja bem-vindo(a) ao **BlueBird**! 💙
 
 Esse site está em construção, mas nasceu da vontade de reunir conteúdos sobre **defesa cibernética (Blue Team)** totalmente em **português**, direto ao ponto e sem complicação.
 
