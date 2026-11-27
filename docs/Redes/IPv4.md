@@ -1,18 +1,10 @@
----
-title: "IPv4: endereços, classes e faixas privadas"
-date: 2025-11-09 12:00:00 -0300
-categories: [Redes, Fundamentos]
-tags: [ipv4, redes, apipa]
-description: O que é um endereço IP, classes IPv4, faixas privadas e APIPA.
----
-
-## 📌 O que é um Endereço IP?
+# 📌 O que é um Endereço IP?
 
 Um **IP (Internet Protocol)** é um identificador único atribuído a cada dispositivo conectado a uma rede que utiliza o protocolo IP para comunicação. Ele funciona como o "endereço" de uma casa na internet — sem ele, os dispositivos não conseguem se localizar ou se comunicar.
 O protocolo IP é **sem conexão** e **não confiável**, isso significa que ele entrega pacotes ("datagramas") **sem garantia de entrega, ordem ou integridade**.
 ---
 
-## 📌 Classificação dos Endereços IPv4
+# 📌 Classificação dos Endereços IPv4
 
 Os endereços IPv4 são classificados em **classes** com base no primeiro octeto:
 
@@ -28,7 +20,7 @@ Os endereços IPv4 são classificados em **classes** com base no primeiro octeto
 
 ---
 
-## 📌 Endereços IP Privados
+# 📌 Endereços IP Privados
 
 Certos intervalos são reservados para redes **privadas**, ou seja, não roteáveis diretamente na Internet:
 
@@ -40,18 +32,18 @@ Esses IPs são usados dentro de redes locais (LANs) e requerem NAT para acessar 
 
 ---
 
-## 📌 O que é um IP APIPA?
+# 📌 O que é um IP APIPA?
 
 **APIPA** significa **Automatic Private IP Addressing**. Ele é um mecanismo que permite a atribuição **automática** de um IP **caso o DHCP não esteja disponível**.
 
-### Características do IP APIPA:
+## Características do IP APIPA:
 
 - Intervalo: `169.254.0.1` até `169.254.255.254`
 - Máscara de sub-rede: `255.255.0.0` `/16`
 - Atribuído **automaticamente** quando o computador não consegue contato com um servidor DHCP.
 - **Não permite acesso à Internet**, apenas comunicação ponto a ponto entre máquinas na mesma sub-rede APIPA.
 
-#### Situação de uso:
+### Situação de uso:
 📌 Um computador tenta obter um IP via DHCP, mas o servidor está fora do ar. O sistema, então, atribui um IP APIPA automaticamente para permitir alguma forma de conectividade básica.
 
 ---

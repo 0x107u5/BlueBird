@@ -1,69 +1,79 @@
 # 🛡️ BlueBird
 
-Blog sobre defesa cibernética (Blue Team) em português: hardening, análise de logs, redes, resposta a incidentes, threat hunting e muito mais.
+Um site dedicado ao compartilhamento de conhecimentos, ferramentas, boas práticas e recursos voltados à defesa cibernética (Blue Team). Ideal para profissionais de segurança da informação, SOC analysts, e entusiastas que desejam fortalecer sua postura defensiva.  
+Para acessar https://0x107u5.github.io/BlueBird/
+O site é gerado com [Zensical](https://zensical.org), a partir do `mkdocs.yml` e dos arquivos em `docs/`.
 
-Acesse: https://0x107u5.github.io/BlueBird/
+## 🔍 Sobre o Projeto
 
-O site é feito com [Jekyll](https://jekyllrb.com) e o tema [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy), e é publicado no GitHub Pages pelo GitHub Actions a cada push na `main`.
+Este projeto tem como objetivo centralizar e organizar conteúdos relevantes para o dia a dia de profissionais de defesa cibernética. O site traz tutoriais, checklists, ferramentas, indicadores de compromisso (IOCs), referências de hardening, scripts úteis e muito mais.
 
-## 🚀 Rodar localmente
+## 🚀 Como Rodar o Projeto Localmente
 
-Pré-requisitos: Git e Ruby 3.x com Bundler.
+### Pré-requisitos
+
+- Git
+- Python
+### Passos
+
+1. Clone o repositório:
 
 ```bash
 git clone https://github.com/0x107u5/BlueBird.git
 cd BlueBird
-bundle install
-bundle exec jekyll serve
+```
+2. Baixar dependências 
+```bash
+pip install -r requirements.txt
 ```
 
-O site abre em http://127.0.0.1:4000/BlueBird/.
+3. Rodar o projeto
 
-## ✍️ Escrever um post
+```bash
+zensical serve
+```
 
-Crie um arquivo em `_posts/` com o nome `AAAA-MM-DD-titulo.md`, por exemplo `_posts/2026-12-01-analise-de-logs.md`:
+## ✍️ Como escrever um post no blog
+
+1. Crie um arquivo em `docs/blog/posts/`, por exemplo `2026-12-01-meu-post.md`.
+2. Comece com o cabeçalho (front matter):
 
 ```markdown
 ---
-title: "Análise de logs no Windows"
-date: 2026-12-01 10:00:00 -0300
-categories: [SOC, Logs]        # até 2 níveis: categoria e subcategoria
-tags: [windows, eventos, soc]  # sempre em minúsculas
-description: Resumo que aparece na listagem e no Google.
-# pin: true                    # fixa o post no topo da home
-# image:
-#   path: /assets/img/posts/analise-logs.png
-#   alt: Descrição da imagem
+date: 2026-12-01
+authors:
+  - 0x107u5
+categories:
+  - Write-ups
+tags:
+  - soc
+slug: meu-post
+draft: true   # remova quando quiser publicar
 ---
 
-Conteúdo do post em Markdown...
+# Título do post
+
+Resumo que aparece na listagem do blog.
+
+<!-- more -->
+
+Resto do conteúdo...
 ```
 
-Rascunhos podem ficar em `_drafts/` (sem data no nome) e aparecem só com `bundle exec jekyll serve --drafts`.
+3. Rode `zensical serve` para ver o post (rascunhos aparecem localmente, mas não no site publicado).
+4. Faça o push para `main`: o GitHub Actions publica o site automaticamente.
 
-Caixas de destaque do Chirpy:
-
-```markdown
-> Dica útil.
-{: .prompt-tip }
-
-> Atenção a isso.
-{: .prompt-warning }
-```
-
-As abas **Categorias**, **Tags** e **Arquivo** são geradas automaticamente a partir dos posts.
+A listagem, o arquivo por data e as páginas de categorias são gerados sozinhos. Autores ficam em `docs/blog/.authors.yml`.
 
 ## 📁 Estrutura
 
 ```
-_config.yml      # Título, idioma, URL, redes sociais, tema escuro
-_posts/          # Um arquivo .md por post
-_tabs/           # Páginas do menu lateral (Sobre, Categorias, Tags, Arquivo)
-_data/           # Links de contato e compartilhamento
-assets/img/      # Imagens (crie quando precisar)
-.github/workflows/pages-deploy.yml  # Build e deploy no GitHub Pages
+docs/
+├── index.md            # Página inicial
+├── sobre.md
+├── Redes/              # Páginas de referência
+└── blog/
+    ├── index.md        # Página do blog (listagem automática)
+    ├── .authors.yml    # Autores
+    └── posts/          # Um arquivo .md por post
 ```
-
-## 📄 Licença
-
-Veja [LICENSE](LICENSE).
