@@ -35,7 +35,7 @@ zensical serve
 
 ## ✍️ Como escrever um post no blog
 
-1. Crie um arquivo em `docs/blog/posts/`, por exemplo `2026-12-01-meu-post.md`.
+1. Copie `templates/post.md` para `docs/blog/posts/`, com um nome como `2026-12-01-meu-post.md`.
 2. Comece com o cabeçalho (front matter):
 
 ```markdown
@@ -69,11 +69,34 @@ A listagem, o arquivo por data e as páginas de categorias são gerados sozinhos
 
 ```
 docs/
-├── index.md            # Página inicial
+├── index.md              # Página inicial
 ├── sobre.md
-├── Redes/              # Páginas de referência
+├── SIEM/                 # Conceitos de SIEM
+│   ├── index.md
+│   └── Google-SecOps/    # UDM, YARA-L, ingestão
+├── Logs/                 # Windows, Linux, rede
+├── Redes/                # IPv4, portas
 └── blog/
-    ├── index.md        # Página do blog (listagem automática)
-    ├── .authors.yml    # Autores
-    └── posts/          # Um arquivo .md por post
+    ├── index.md          # Listagem automática
+    ├── .authors.yml
+    └── posts/            # Um arquivo .md por post
+templates/
+├── post.md               # Modelo de post do blog
+└── pagina.md             # Modelo de página de referência
 ```
+
+### Post ou página?
+
+- **Página** (em `docs/SIEM/`, `docs/Logs/`, ...): conteúdo de referência que você vai atualizar com o tempo, como "Eventos de segurança do Windows".
+- **Post** (em `docs/blog/posts/`): algo datado, como um write-up, um caso investigado ou uma novidade. Use as categorias `SIEM`, `Google SecOps` ou `Logs` para ligar o post ao tema.
+
+### Adicionar uma página nova
+
+1. Copie `templates/pagina.md` para a pasta da seção, por exemplo `docs/Logs/sysmon.md`.
+2. Adicione a página no `nav` do `mkdocs.yml`, dentro da seção certa.
+
+### Adicionar uma nova plataforma de SIEM
+
+1. Crie uma pasta em `docs/SIEM/`, por exemplo `docs/SIEM/Splunk/`, com um `index.md`.
+2. Adicione a pasta no `nav` do `mkdocs.yml` e uma linha na tabela de `docs/SIEM/index.md`.
+3. Se quiser, adicione a plataforma em `categories_allowed` no `mkdocs.yml` para usar como categoria do blog.
